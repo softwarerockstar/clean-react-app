@@ -12,9 +12,7 @@ export const postToModel = (post: Post, mockDate = true): PostModel => {
     title: post.title,
     content: post.body,
     authorId: post.userId,
-    excerpt: post.body.length > 100 
-      ? `${post.body.substring(0, 100)}...` 
-      : post.body,
+    excerpt: post.body, // Change this to add "..." if needed
     formattedDate: date.toFormat('LLL dd, yyyy')
   };
 };
